@@ -1,0 +1,259 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+}
+body{
+    width: 100%;
+    min-width: 320px;
+    background: #000;
+}
+/* HEADER */
+header{
+    width: 100%;
+    height: 9rem;
+    background-color: #000;
+    color: #fff;
+    padding: 0 2rem;
+}
+h1{
+    width: 10%;
+    padding: 1rem 0;
+    font-size: 30px;
+    font-weight: 100;
+}
+#menu{
+    display: none;
+}
+#buttonMobile{
+    width: 30px;
+    height: 18px;
+    border: none;
+    background: transparent;
+    float: right;
+    cursor: pointer;
+}
+#lineTop{
+    display: block;
+    border-top: 2px solid #fff;
+    width: 30px;
+    transition: .5s all;
+}
+#lineMiddle, #lineBottom{
+    content: '';
+    display: block;
+    width: 30px;
+    height: 2px;
+    background: #fff;
+    margin-top: 6px;
+    transition: .7s;
+    position: relative;
+}
+#buttonMobile:hover #lineTop{
+    display: none;
+}
+#buttonMobile:hover #lineBottom{
+    transform: rotate(-135deg);
+    top: -7px;
+}
+#buttonMobile:hover #lineMiddle{
+    transform: rotate(135deg);
+}
+/* MAIN */
+main{
+    width: 100%;
+    background-color: #000;
+}
+.fantasy{
+    background-image: url(img/fantasy.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.comedy{
+    background-image: url(img/comedy.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.horror{
+    background-image: url(img/horror.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.card{
+    padding: 10px;
+}
+.movies{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.movieCard{
+    width: 80px;
+}
+.movieCard img{
+    width: 80px;
+    height: 120px;
+    transition: .5s;
+    border-radius: 10px;
+}
+figcaption{
+    width: 80px;
+    background: #000;
+    color: #d69d00;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    padding: 3px 0;
+    transition: .5s;
+    font-size: 10px;
+}
+h2{
+    background: #000;
+    color: #fff;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 100;
+}
+h2:hover{
+    transform: scale(1.1);
+}
+.movieCard img:hover{
+    transform: scale(1.05);
+    border-radius: 0px;
+    box-shadow: 5px 5px 5px #000;
+}
+figcaption:hover{
+    transform: scale(1.05);
+}
+/* FOOTER */
+footer{
+    width: 100%;
+    padding: 1rem;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    font-weight: 100;
+}
+h3{
+    color: #fff;
+    margin: 0 auto;
+    padding: 10px 10px;
+    font-weight: 100;
+}
+.copyRight{
+    margin: 0 auto;
+    width: 75%;
+}
+.socialMediaIcon{
+    font-size: 30px;
+}
+.socialMediaIcon i{
+    margin: 10px;
+    transition: .5s all;
+    cursor: pointer;
+}
+.socialMediaIcon i:hover{
+    transform: scale(1.1);
+}
+.fa-facebook-square:hover{
+    color: #2222ff;
+}
+.fa-instagram:hover{
+    color: #ff0080;
+}
+.fa-linkedin:hover{
+    color: #0004ff;
+}
+.fa-github:hover{
+    color: #fff;
+    background: #000;
+    border-radius: 3px;
+}
+.up{
+    width: 60px;
+    height: 60px;
+    background: #fff;
+    position: fixed;
+    z-index: 999;
+    bottom: 1rem;
+    right: 2rem;
+    border-radius: 50%;
+    opacity: .5;
+    transition: .5s;
+}
+.up img{
+    width: 50px;
+    height: 50px;
+    margin-top: 5px;
+}
+.up:hover{
+    opacity: 1;
+}
+@media (min-width: 510px){
+    .movieCard{
+        width: 150px;
+    }
+    .movieCard img{
+        width: 150px;
+        height: 220px;
+    }
+    figcaption{
+        width: 150px;
+    }
+}
+@media (min-width:768px) {
+    #menu{
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        list-style: none;
+        width: 100%;
+    }
+    #menu li{
+        width: 10rem;
+        height: 2rem;
+        margin-left: 2px;
+    }
+    
+    #menu li:hover{
+        background: #0e0e0e;
+    }
+    
+    #menu a{
+        display: block;
+        color: #fff;
+        text-decoration: none;
+        padding: .5rem 0;
+        font-weight: 100;
+    }
+    #buttonMobile{
+        display: none;
+    }
+    .comedy, .horror{
+        background-position: center -1rem;
+    }
+    .fantasy{
+        background-position: center bottom;
+    }
+}
+@media (min-width:992px) {
+    .comedy, .horror{
+        background-position: center -6rem;
+    }
+}
+@media (min-width:1200px) {
+    .comedy, .horror{
+        background-position: center -9rem;
+    }
+}
